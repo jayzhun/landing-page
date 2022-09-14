@@ -86,7 +86,7 @@ img {
   margin-bottom: 1.1em;
 }
 
-.btn {
+.btn-sign {
   padding: 1em 3em;
   margin-top: 2.3em;
   border: 1px solid black;
@@ -100,7 +100,7 @@ img {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn-sign:hover {
   color: rgb(0, 0, 0, 0.7);
   background-color: white;
   border: 1px solid black;
@@ -191,7 +191,10 @@ main {
 
 /* ZORO SECTION */
 
-.zoro-section {
+.zoro-section,
+.nami-section,
+.usopp-section,
+.sanji-section {
   display: flex;
   margin-bottom: 4em;
   background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
@@ -201,25 +204,52 @@ main {
   box-shadow: inset 3px 3px 10px 1px rgb(2, 1, 1);
 }
 
-.zoro-leftcont {
+.zoro-leftcont,
+.nami-leftcont,
+.usopp-leftcont,
+.sanji-leftcont {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.zoro-img {
+.strawhat-img {
   border-radius: 0%;
   /* padding-left: 2em; */
 }
 
 .btn-zoro {
   border: none;
-  color: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
-  background-color: none;
+  background-image: linear-gradient(
+    to right,
+    #e9d362 0%,
+    #333333 51%,
+    #e9d362 100%
+  );
+  margin: 3em 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
 
-.zoro-info {
+.btn-zoro:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.zoro-info,
+.nami-info,
+.usopp-info,
+.sanji-info {
   display: flex;
   visibility: hidden;
   flex-direction: column;
@@ -228,7 +258,10 @@ main {
   overflow: hidden;
 }
 
-.zoro-info > * {
+.zoro-info > *,
+.nami-info > *,
+.usopp-info > *,
+.sanji-info > * {
   position: relative;
   animation: 10s linear 0s 1 reverse move;
 }
@@ -244,6 +277,137 @@ main {
     transform: translateX(-100%);
     left: 100%;
   }
+}
+
+/* Nami Styling */
+
+.nami-section {
+  background-image: radial-gradient(
+    circle 957px at 8.7% 50.5%,
+    rgba(246, 191, 13, 1) 0%,
+    rgba(249, 47, 47, 1) 90%
+  );
+}
+
+.nami-img {
+  margin-right: 1em;
+  border: 1px solid #ff8008;
+  box-shadow: 3px 4px 15px 5px #ff8005;
+}
+
+.btn-nami {
+  background-image: linear-gradient(
+    to right,
+    #ff8008 0%,
+    #ffc837 51%,
+    #ff8008 100%
+  );
+  margin: 3em 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-nami:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* USOPP STYLING */
+
+.usopp-section {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e74c3c,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #e74c3c,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.usopp-img {
+  object-fit: fill;
+  float: left;
+  width: 600px;
+  height: 301px;
+  box-shadow: 3px 4px 15px 4px black;
+  margin-right: 1em;
+}
+
+.btn-usopp {
+  background-image: linear-gradient(
+    to right,
+    #eacda3 0%,
+    #d6ae7b 51%,
+    #eacda3 100%
+  );
+  margin: 3em 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-usopp:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/* SANJI STYLING */
+.sanji-img {
+  object-fit: fill;
+  float: left;
+  width: 600px;
+  height: 300px;
+  margin-right: 2em;
+  box-shadow: 2px 2px 10px 2px #39cfd1;
+}
+
+.sanji-section {
+  background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
+}
+
+.btn-sanji {
+  background-image: linear-gradient(
+    to right,
+    #b2fefa 0%,
+    #0ed2f7 51%,
+    #b2fefa 100%
+  );
+  margin: 3em 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-sanji:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Footer */
