@@ -52,6 +52,55 @@ nav {
   color: black;
 }
 
+.label {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.label img {
+  width: 25px;
+}
+
+.checkbox:checked + .label .switch {
+  transform: translateX(26px);
+  transition: 00.35s;
+}
+
+.switch {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  background-color: #fff;
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+}
+
+body.dark nav{
+  background: linear-gradient(to bottom, #323232 0%, #3f3f3f 40%, #1c1c1c 150%),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(0, 0, 0, 0.25) 200%
+    );
+  background-blend-mode: multiply;
+}
+
+body.dark {
+  background: #111;
+  color: white;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
 /* Header */
 
 header {
@@ -61,7 +110,7 @@ header {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 18px;
   padding: 3.5rem;
-  margin: 2rem;
+  margin: 5rem 10rem;
 }
 
 img {
@@ -120,12 +169,14 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: 2em;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .yonko-title {
   font-weight: 900;
   font-size: 3em;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.5em;
   border-bottom: 2px solid rgb(15, 15, 15);
 }
 
@@ -133,7 +184,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 2em;
+  gap: 2rem;
 }
 
 .yonko-card {
@@ -158,10 +209,13 @@ main {
 .yonko-card p {
   font-size: 20px;
   color: whitesmoke;
+  line-height: 2em;
+  padding: 1em;
 }
 
 .yonko-card h1 {
   font-style: italic;
+  margin-bottom: 12px;
 }
 
 .roger-quote {
@@ -170,479 +224,6 @@ main {
   line-height: 2em;
   font-size: 3em;
   font-style: italic;
-}
-
-/* CARD STYLING */
-
-.card-name {
-  font-size: 2.9em;
-  font-weight: bold;
-}
-
-.card-description {
-  font-size: 25px;
-  text-align: center;
-}
-
-.card-berries {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.zoro-section,
-.nami-section,
-.usopp-section,
-.sanji-section,
-.chopper-section,
-.robin-section,
-.franky-section,
-.brook-section,
-.jinbe-section {
-  display: flex;
-  margin-bottom: 4em;
-  background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
-  margin: 2.5em 8em;
-  padding: 4rem;
-  border: 2px solid black;
-  box-shadow: inset 3px 3px 10px 1px rgb(2, 1, 1);
-}
-
-.zoro-leftcont,
-.nami-leftcont,
-.usopp-leftcont,
-.sanji-leftcont,
-.chopper-leftcont,
-.robin-leftcont,
-.franky-leftcont,
-.brook-leftcont,
-.jinbe-leftcont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.strawhat-img {
-  border-radius: 0%;
-  /* padding-left: 2em; */
-}
-
-.zoro-info,
-.nami-info,
-.usopp-info,
-.sanji-info,
-.chopper-info,
-.robin-info,
-.franky-info,
-.brook-info,
-.jinbe-info {
-  display: flex;
-  visibility: hidden;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  overflow: hidden;
-}
-
-.zoro-info > *,
-.nami-info > *,
-.usopp-info > *,
-.sanji-info > *,
-.chopper-info > *,
-.robin-info > *,
-.franky-info > *,
-.brook-info > *,
-.jinbe-info > * {
-  position: relative;
-  animation: 8s ease-in 1s 3 reverse move;
-}
-
-@keyframes move {
-  0%,
-  25% {
-    transform: translateX(0%);
-    left: 0%;
-  }
-  75%,
-  100% {
-    transform: translateX(-100%);
-    left: 100%;
-  }
-}
-
-/* ZORO STYLING */
-
-.btn-zoro {
-  border: none;
-  background-image: linear-gradient(
-    to right,
-    #e9d362 0%,
-    #333333 51%,
-    #e9d362 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-zoro:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Nami Styling */
-
-.nami-section {
-  background-image: radial-gradient(
-    circle 957px at 8.7% 50.5%,
-    rgba(246, 191, 13, 1) 0%,
-    rgba(249, 47, 47, 1) 90%
-  );
-}
-
-.nami-img {
-  margin-right: 1em;
-  border: 1px solid #ff8008;
-  box-shadow: 3px 4px 15px 5px #ff8005;
-}
-
-.btn-nami {
-  background-image: linear-gradient(
-    to right,
-    #ff8008 0%,
-    #ffc837 51%,
-    #ff8008 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-nami:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* USOPP STYLING */
-
-.usopp-section {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e74c3c,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to left,
-    #e74c3c,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.usopp-img {
-  object-fit: fill;
-  float: left;
-  width: 600px;
-  height: 301px;
-  box-shadow: 3px 4px 15px 4px black;
-  margin-right: 1em;
-}
-
-.btn-usopp {
-  background-image: linear-gradient(
-    to right,
-    #eacda3 0%,
-    #d6ae7b 51%,
-    #eacda3 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  cursor: pointer;
-}
-
-.btn-usopp:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-/* SANJI STYLING */
-
-.sanji-img {
-  object-fit: fill;
-  float: left;
-  width: 600px;
-  height: 300px;
-  margin-right: 2em;
-  box-shadow: 2px 2px 10px 2px #39cfd1;
-}
-
-.sanji-section {
-  background-image: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
-}
-
-.btn-sanji {
-  background-image: linear-gradient(
-    to right,
-    #b2fefa 0%,
-    #0ed2f7 51%,
-    #b2fefa 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: black;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  cursor: pointer;
-}
-
-.btn-sanji:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-/* CHOPPER STYLING */
-
-.chopper-section {
-  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
-}
-
-.chopper-img {
-  object-fit: cover;
-  float: left;
-  width: 600px;
-  height: 300px;
-  margin-right: 2em;
-  box-shadow: 2px 2px 10px 3px #faaca8;
-}
-
-.btn-chopper {
-  background-image: linear-gradient(
-    to right,
-    #ddd6f3 0%,
-    #faaca8 51%,
-    #ddd6f3 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  cursor: pointer;
-}
-
-.btn-chopper:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-/* ROBIN STYLING */
-
-.robin-section {
-  background-image: linear-gradient(
-    358.4deg,
-    rgba(249, 151, 119, 1) -2.1%,
-    rgba(98, 58, 162, 1) 90%
-  );
-}
-
-.robin-img {
-  margin-right: 2em;
-  box-shadow: 2px 2px 25px 2px rgba(249, 151, 119, 1);
-}
-
-.btn-robin {
-  background-image: linear-gradient(
-    to right,
-    #ed4264 0%,
-    #ffedbc 51%,
-    #ed4264 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-  cursor: pointer;
-}
-
-.btn-robin:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-}
-
-/* FRANKY STYLING */
-
-.franky-section {
-  background: #d31027; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ea384d,
-    #d31027
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ea384d,
-    #d31027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.franky-img {
-  object-fit: fill;
-  float: left;
-  width: 600px;
-  height: 300px;
-  margin-right: 2em;
-  box-shadow: 2px 2px 10px 3px black;
-}
-
-.btn-franky {
-  background-image: linear-gradient(
-    to right,
-    #ff4b1f 0%,
-    #1fddff 51%,
-    #ff4b1f 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-franky:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* BROOK STYLING */
-
-.brook-section {
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-}
-
-.brook-img {
-  margin-right: 2em;
-  box-shadow: 2px 2px 10px 3px black;
-}
-
-.btn-brook {
-  background-image: linear-gradient(
-    to right,
-    #41295a 0%,
-    #2f0743 51%,
-    #41295a 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-brook:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* JINBE STYLING */
-
-.jinbe-section {
-  background-image: linear-gradient(
-    -225deg,
-    #d4ffec 0%,
-    #57f2cc 48%,
-    #4596fb 100%
-  );
-}
-
-.jinbe-img {
-    margin-right: 2em;
-    box-shadow: 2px 2px 10px 3px black;
-}
-
-.btn-jinbe {
-  background-image: linear-gradient(
-    to right,
-    #f09819 0%,
-    #edde5d 51%,
-    #f09819 100%
-  );
-  margin: 3em 10px;
-  padding: 15px 45px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-  display: block;
-}
-
-.btn-jinbe:hover {
-  background-position: right center; /* change the direction of the change here */
-  color: #fff;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 /* Footer */
